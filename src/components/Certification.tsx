@@ -6,10 +6,10 @@ const Certification = () => {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
   const certs = [
-    { id: 1, title: "Maritime Safety Certificate", img: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=1000&auto=format&fit=crop" },
-    { id: 2, title: "Advanced Ship Design", img: "https://images.unsplash.com/photo-1605152276897-4f618f831968?q=80&w=1000&auto=format&fit=crop" },
-    { id: 3, title: "Digital Twin Professional", img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" },
-    { id: 4, title: "Project Management", img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1000&auto=format&fit=crop" }
+    { id: 1, title: "Maritime Safety Certificate", img: "" },
+    { id: 2, title: "Advanced Ship Design", img: "" },
+    { id: 3, title: "Digital Twin Professional", img: "" },
+    { id: 4, title: "Project Management", img: "" }
   ];
 
   return (
@@ -21,13 +21,13 @@ const Certification = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {certs.map((cert) => (
-            <div 
-              key={cert.id} 
+            <div
+              key={cert.id}
               onClick={() => setSelectedImg(cert.img)}
               className="aspect-[3/4] border border-gray-200 cursor-pointer overflow-hidden group relative bg-gray-50"
             >
-              <img 
-                src={cert.img} 
+              <img
+                src={cert.img}
                 alt={cert.title}
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
               />
@@ -39,19 +39,19 @@ const Certification = () => {
         </div>
 
         {selectedImg && (
-          <div 
+          <div
             className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-20"
             onClick={() => setSelectedImg(null)}
           >
-            <button 
+            <button
               className="absolute top-10 right-10 text-white text-4xl font-light"
               onClick={() => setSelectedImg(null)}
             >
               ×
             </button>
-            <img 
-              src={selectedImg} 
-              className="max-w-full max-h-full object-contain shadow-2xl animate-in zoom-in duration-300" 
+            <img
+              src={selectedImg}
+              className="max-w-full max-h-full object-contain shadow-2xl animate-in zoom-in duration-300"
               alt="Certification Preview"
             />
           </div>
