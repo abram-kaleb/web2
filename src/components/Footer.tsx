@@ -52,11 +52,11 @@ const Footer = () => {
     <footer id="contact" className="bg-black py-10 border-t border-white/5 relative">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
-          <div className="flex items-center gap-12">
-            <h2 className="text-xl font-black tracking-tighter uppercase leading-none text-white">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <h2 className="text-xl font-black tracking-tighter uppercase leading-none text-white text-center md:text-left">
               ABRAM<span className="text-[#F2E500] not-italic">KALEB</span>
             </h2>
-            <div className="hidden md:flex gap-8">
+            <div className="flex gap-8">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
@@ -81,9 +81,7 @@ const Footer = () => {
 
             <div className={`
               fixed lg:absolute z-[200] bg-white shadow-2xl transition-all duration-500 ease-in-out overflow-hidden
-              /* Mobile: Center Screen */
               inset-x-4 top-1/2 -translate-y-1/2 lg:inset-auto lg:top-auto
-              /* Desktop: Bottom Right */
               lg:bottom-0 lg:right-0 lg:translate-y-0 lg:w-[350px]
               ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'}
             `}>
@@ -147,14 +145,14 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/5">
-          <div className="flex gap-8">
+          <div className="flex gap-4 md:gap-8">
             {['Imprint', 'Data Protection', 'Privacy Setting'].map((link) => (
-              <T3 key={link} className="text-[8px] text-gray-600 font-bold uppercase tracking-widest hover:text-white cursor-pointer transition-colors">
+              <T3 key={link} className="text-[7px] md:text-[8px] text-gray-600 font-bold uppercase tracking-widest hover:text-white cursor-pointer transition-colors">
                 {link}
               </T3>
             ))}
           </div>
-          <T3 className="text-[8px] text-gray-800 font-bold uppercase tracking-[0.4em]">
+          <T3 className="text-[7px] md:text-[8px] text-gray-800 font-bold uppercase tracking-[0.4em] text-center">
             © {currentYear} — ALL RIGHTS RESERVED
           </T3>
         </div>
