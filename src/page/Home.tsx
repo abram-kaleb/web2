@@ -21,15 +21,15 @@ const Home = () => {
     },
     {
       id: "02",
-      category: "Designing",
-      title: "An Oil Tanker for cargo optimization",
+      category: "Ship Design",
+      title: "General Arrangement, Safety Plan, Machinery, and Electrical System",
       image: "",
-      sideLabel: "Design"
+      sideLabel: "Ship Design"
     },
     {
       id: "03",
-      category: "Developing a",
-      title: "Ship navigation simulation",
+      category: "Development of",
+      title: "Ship Navigation, Engine, and Electrical Simulator",
       image: "",
       sideLabel: "Simulation"
     },

@@ -5,9 +5,9 @@ import { H1, T3 } from './Typography';
 const Experience = () => {
   const experiences = [
     {
-      date: "February 2025 - Now",
+      date: "February 2026 - Now",
       company: "Hochschule Wismar, Rostock",
-      role: "Lab Assistance"
+      role: "Lab Assistant"
     },
     {
       date: "August 2025 - October 2025",

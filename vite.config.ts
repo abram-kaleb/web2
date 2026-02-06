@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: './', // Pakai titik agar path-nya relatif (anti error 404)
+  base: './',
   build: {
-    outDir: 'docs', // Build ke folder docs
+    outDir: 'docs',
   }
 })
